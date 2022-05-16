@@ -84,11 +84,10 @@ body {
       
       display: grid;
       grid-template-areas: 
-            "nav-sidebar top-bar top-bar top-bar top-bar"
-            "nav-sidebar main-content main-content main-content main-content"
-            "nav-sidebar main-content main-content main-content main-content"
-            "nav-sidebar main-content main-content main-content main-content"
-            "nav-sidebar main-content main-content main-content main-content";
+            "nav-sidebar top-bar top-bar"
+            "nav-sidebar main-content main-content";
+
+      background-color: #e2e8f0;
 }
 
 .nav-sidebar {
@@ -102,6 +101,7 @@ body {
 
       background-color: #1992d4;
       color: whitesmoke;
+      
 }
 
 .logo-container {
@@ -150,7 +150,99 @@ body {
 
 .top-bar {
       grid-area: top-bar;
+
+      display: grid;
+      grid-template-rows: 1fr 2fr;
+      grid-template-columns: 2fr 1fr;
+      grid-template-areas: 
+            "search-bar user-options"
+            "welcome-message-container page-options";
+      row-gap: 1rem;
+      padding: 1rem 2rem;
+      background-color: #FFFFFF;
 }
+
+.search-bar {
+      grid-area: search-bar;
+
+      display: flex;
+      gap: 1.5rem;
+      align-items: center;
+}
+
+.search-bar input {
+      outline: none;
+      border: none;
+      background-color: #e2e8f0;
+      border-radius: 10px;
+      width: 100%;
+      padding-inline: 1rem;
+}
+
+.user-options {
+      grid-area: user-options;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1.5rem;
+}
+
+.user-options i {
+      font-size: 1.2rem;
+}
+
+.user-options img {
+      height: 35px;
+      width: 35px;
+}
+
+.user-options p {
+      font-size: 1.2rem;
+      font-weight: 500;
+}
+
+.welcome-message-container {
+      grid-area: welcome-message-container;
+
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+}
+
+.welcome-message-container img {
+      height: 75px;
+      width: 75px;
+}
+
+.welcome-message :first-child {
+      font-size: 1rem;
+      font-weight: 200;
+}
+
+.welcome-message :last-child {
+      font-size: 1.4rem;
+      font-weight: 500;
+}
+
+.page-options {
+      grid-area: page-options;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+}
+
+.page-options button{
+      cursor: pointer;
+      outline: none;
+      border: none;
+      padding: 0.5rem 1.4rem;
+      background-color: #1992d4;
+      border-radius: 20px;
+      color: whitesmoke;
+      font-weight: 500;
+}
+
 
 .user-projects {
       grid-area: user-projects;
